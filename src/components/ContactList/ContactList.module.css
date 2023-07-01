@@ -1,0 +1,43 @@
+.ContactList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  min-width: 430px;
+  color: white;
+  gap: 3px;
+  background-color: rgb(112, 199, 166);
+}
+
+.ItemList {
+  display: flex;
+  flex-direction: row;
+  padding-right: 40px;
+  justify-content: space-between;
+  align-items: ;
+}
+.Btn {
+  background-color: rgb(3, 141, 83);
+  border: none;
+  color: white;
+  padding: 0px 32px;
+  margin: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.Btn:focus,
+.Btn:hover {
+  background-color: rgb(230, 68, 56);
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 0px 32px;
+  margin: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  scale: 1.07;
+}
+

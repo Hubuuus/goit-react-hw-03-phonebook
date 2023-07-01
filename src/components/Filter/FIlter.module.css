@@ -1,0 +1,16 @@
+.Filter_h4 {
+ color: white;
+ font-size: 20px;   
+}
+
+.Filter_input{
+    margin: 0px 15px;
+    min-width: 370px;
+}
+
+.Filter_input::placeholder {
+    font-weight: bold;
+    padding-left: 10px;
+    opacity: 0.2;
+    color: rgb(3, 141, 83);
+}

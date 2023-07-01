@@ -1,0 +1,52 @@
+.Form {
+border: solid 1px rgb(6, 170, 102);
+min-height: 200px;
+min-width: 400px;
+background-color: aliceblue;
+border-radius: 3px;
+display: flex;
+flex-direction: column;
+}
+
+.Form_h3{
+    color: rgb(3, 141, 83);
+    padding-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.Form_input{
+    margin: 0px 15px;
+
+}
+.Form_input::placeholder {
+    font-weight: bold;
+    padding-left: 10px;
+    opacity: 0.2;
+    color: rgb(3, 141, 83);
+}
+
+.Form_button{
+  margin: 15px;
+  background-color: rgb(3, 141, 83);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.Form_button:focus, .Form_button:hover {
+    margin: 15px;
+    background-color: rgb(120, 231, 185);
+    border: none;
+    color: rgb(3, 141, 83);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    scale: 1.07;
+}
