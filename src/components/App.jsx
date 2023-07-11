@@ -16,6 +16,32 @@ export class App extends Component {
     ],
     filter: "",
   };
+  // constructor() {
+  //   super();
+  //   console.log("Alert constructor!");
+  //   const state = this.state;
+  //   localStorage.setItem(`Key`, JSON.stringify(state.contacts));
+  //   const Key = localStorage.getItem("Key");
+  //   console.log("Key:", {Key});
+  // }
+
+  // async componentDidMount() {
+  //   console.log("Alert constructor!");
+  //   const storageKey = [localStorage.getItem(`Key`)];
+  //   if (storageKey === null) {
+  //     console.log(`storageKey1: ${storageKey}`);
+  //   } else {
+  //     // this.setState(prevState => ({
+  //     //   contacts: [...prevState.contacts, storageKey],
+  //     // }));
+  //     console.log(`storageKey2: ${storageKey}`);
+  //   }
+  // }
+
+  //    getDerivedStateFromProps() {
+  //     return {
+  //       this.setState(localStorage.getItem(`storageKey`));
+  // }}
 
   updateContact = contact => {
     //aktualizuje state.contacts
@@ -42,6 +68,22 @@ export class App extends Component {
     //wuszukanie z contacts
     return arr.filter(contact => contact.name.toLowerCase().includes(normalizedCase));
   };
+
+  componentDidMount() {
+    const storageContacts = JSON.parse(localStorage.getItem("storageContacts"));
+    // console.log("storageContacts:", storageContacts);
+    if (storageContacts) {
+      this.setState({
+        contacts: storageContacts,
+      });
+    }
+  }
+
+  componentDidUpdate(_, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem("storageContacts", JSON.stringify(this.state.contacts));
+    }
+  }
 
   render() {
     const { filter, contacts } = this.state;
